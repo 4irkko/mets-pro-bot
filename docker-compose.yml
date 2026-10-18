@@ -1,0 +1,8 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    shm_size: 1gb
+    volumes:
+      - ./data:/app/data
